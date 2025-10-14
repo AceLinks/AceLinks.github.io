@@ -1,0 +1,143 @@
+@keyframes walking {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  10%  { transform: translate(-20px, -10px) scale(0.985); }
+  20%  { transform: translate(-40px, 10px) scale(0.970); }
+  30%  { transform: translate(-60px, -10px) scale(0.95); }
+  40%  { transform: translate(-80px, 10px) scale(0.94); }
+  50%  { transform: translate(-100px, 20px) scale(0.93); }
+  60%  { transform: translate(-120px, 15px) scale(0.89); }
+  70%  { transform: translate(-140px, 30px) scale(0.86); }
+  80%  { transform: translate(-160px, 20px) scale(0.87); }
+  90%  { transform: translate(-180px, 35px) scale(0.86); }
+  100% { transform: translate(-200px, 50px) scale(0.83); }
+}
+@keyframes walking2 {
+  0%   { transform: translate(0px, 0px) scale(1) rotateY(180deg); }
+  10%  { transform: translate(-20px, -10px) scale(0.995)rotateY(180deg); }
+  20%  { transform: translate(-40px, 0px) scale(0.980)rotateY(180deg); }
+  30%  { transform: translate(-60px, -10px) scale(0.95)rotateY(180deg); }
+  40%  { transform: translate(-80px, 0px) scale(0.920)rotateY(180deg); }
+  50%  { transform: translate(-100px, 10px) scale(0.90)rotateY(180deg); }
+  60%  { transform: translate(-120px, 0px) scale(0.895)rotateY(180deg); }
+  70%  { transform: translate(-140px, 20px) scale(0.850)rotateY(180deg); }
+  80%  { transform: translate(-160px, 10px) scale(0.840)rotateY(180deg); }
+  90%  { transform: translate(-180px, 30px) scale(0.80)rotateY(180deg); }
+  100% { transform: translate(-200px, 40px) scale(0.80) rotateY(180deg); }
+}
+
+.character {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position:center;
+  position: absolute;
+
+}
+#background{
+    background-image:url(background2.jpg);
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background-position: center;
+    background-size:cover;
+
+}
+
+#pig1 {  
+	background-image:url(pig_hay-removebg-preview.png);
+      animation-duration: 6s;
+      top: 40%;
+      z-index:1;      
+      animation: walking 4s linear;
+      left:850px;
+      transform: translate(-200px, 50px) scale(0.83); 
+
+}
+#pig2 {
+      background-image:url(pig_wooftransparent.png);
+      animation-name: walking2;
+      top: 52%;
+      transform: translate(-200px, 40px) scale(0.80) rotateY(180deg); 
+      z-index:1;
+      left:650px;
+      animation: walking2 4s linear ;
+
+}
+#pig3 {
+      background-image:url(pig_brick-removebg-preview.png);
+      top: 55%;
+      transform: translateY(-50%);
+      z-index:1;
+      left:400px;
+      width:150px;
+      height:200px;
+      animation-duration: 6s;
+      animation: walking 4s linear ;
+      transform: translate(-200px, 50px) scale(0.83); 
+}
+#textbox {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba(165, 42, 42, 0.5); /* brown with 50% opacity */
+    color: white;  /* text color */
+    padding: 20px; /* spacing inside the box */
+    font-size: 40px;
+    z-index:20;
+    text-align: center;
+    margin-left:50px;
+}
+
+#next {
+      width:200px;
+      height:100px;
+      border: 1px dotted black;
+      position:absolute;
+      bottom:50px;
+      right: 50px;
+      background-color: pink;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      text-decoration: none;
+      
+}
+#next:hover {
+      transform: scale(1.1);
+      background-color:lightpink;
+      border: 2px ;
+      line-height: 50px;
+      
+      text-decoration:none
+}
+
+#back {
+      width:200px;
+      height:100px;
+      border: 1px dotted black;
+      position:absolute;
+      bottom:50px;
+      left: 50px;
+      background-color: lightblue;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      text-decoration: none;
+      
+}
+#back:hover {
+      transform: scale(1.1);
+      background-color:rgb(173, 173, 247);
+      border: 2px ;
+      line-height: 50px;
+      
+      text-decoration:none
+}
+
+
+body {
+    margin:0;
+}

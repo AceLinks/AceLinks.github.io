@@ -76,18 +76,36 @@
       transform: translate(-200px, 50px) scale(0.83); 
 }
 #textbox {
-    width: 400px;
-    height: 300px;
-    position: absolute;
-    border-radius: 10px;
-    background-color: rgba(165, 42, 42, 0.5); /* brown with 50% opacity */
-    color: white;  /* text color */
-    padding: 20px; /* spacing inside the box */
-    font-size: 40px;
-    z-index:20;
-    text-align: center;
-    margin-left:50px;
+  position: absolute;
+  top: 5%;
+  left: 50px;
+  width: 500px;
+  height: 200px;
+
+  background-color: rgba(165, 42, 42, 0.5); /* brown, 50% opacity */
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding: 30px;
+
+  display: flex;
+  align-items: center;     /* centers text vertically */
+  justify-content: center; /* centers text horizontally */
+
+  z-index: 20;
+
+  /* 💬 Speech bubble shape with tail */
+  clip-path: polygon(
+    0% 0%, 
+    100% 0%, 
+    100% 80%, 
+    70% 80%, 
+    60% 100%, 
+    50% 80%, 
+    0% 80%
+  );
 }
+
 
 #next {
       width:200px;

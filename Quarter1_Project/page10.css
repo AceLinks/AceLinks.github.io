@@ -106,10 +106,10 @@
 
 #textbox {
     width: 400px;
-    height: 200px;
+    height: 300px;
     position: absolute;
     top: 5%;   /* Pushes it to the top */
-    right: 20%  ;  /* Pushes it to the left */
+    left: 30%  ;  /* Pushes it to the left */
     border-radius: 10px;
     background-color: rgba(210, 108, 219, 0.5); /* brown with 50% opacity */
     color: white;  /* text color */

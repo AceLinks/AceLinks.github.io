@@ -84,21 +84,33 @@
 }
 
 
-#textbox {
-    width: 400px;
-    height: 300px;
-    position: absolute;
-    top: 5%;   /* Pushes it to the top */
-    right: 20%  ;  /* Pushes it to the left */
-    border-radius: 10px;
-    background-color: rgba(124, 215, 221, 0.5); /* brown with 50% opacity */
-    color: white;  /* text color */
-    padding: 20px; /* spacing inside the box */
-    font-size: 40px;
-    z-index:20;
-    text-align: center;
-
+.textbox-shape {
+  float: left; /* shape-outside only works on floated elements */
+  width: 300px;
+  height: 250px;
+  font-size:30px;
+  background-color: rgba(124, 215, 221, 0.5);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    30% 100%,
+    25% 115%,
+    20% 100%,
+    0% 100%
+  );
+  shape-outside: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    30% 100%,
+    25% 115%,
+    20% 100%,
+    0% 100%
+  );
+  margin: 20px;
 }
+
 
 #next {
       width:200px;
@@ -150,4 +162,5 @@
 
 body {
     margin:0;
+    overflow: hidden;
 }

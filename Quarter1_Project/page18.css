@@ -1,0 +1,218 @@
+@keyframes lid{
+    0%{ top:33%; left:45px; transform:rotateX(40deg) rotateY(0deg) rotate(0deg);}
+    70%{ top:33%; left:45px; transform:rotateX(40deg) rotateY(0deg) rotate(0deg);}
+    80% { top:65%; left:300px; transform:rotateX(40deg) rotateY(0deg)rotate(187deg);}
+    90%{top:20%; left:100px; transform:rotateX(40deg) rotateY(0deg)rotate(40deg);}
+    100%{ top:33%; left:45px; transform:rotateX(50deg) rotateY(2deg) rotate(0deg);}
+}
+@keyframes falling{
+    0%{top:0%; left:100px; opacity:1;z-index:-1; transform:rotate(270deg)}
+    70%{z-index:2; opacity:1;}
+    85%{z-index:1; opacity:1;}
+    86%{z-index:1;opacity:0;}
+    100%{top:55%; left:100px; opacity:0; z-index:-1;transform:rotate(270deg)}
+}
+
+#background{
+    background-image:url(brickbesthouse.png);
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat
+}
+#pig1 {
+    background-image:url(pig_hay-removebg-preview.png);
+      top: 50%;
+      z-index:1;      
+      right:100px;
+      opacity:1;
+      width:550px;
+      height:550px;
+      background-size: cover;
+  background-position:center;
+  position: absolute;   
+ 
+}
+#pig2 {  
+    background-image:url(pig_wooftransparent.png);
+      top: 50%;
+      z-index:1;      
+      right:500px;
+      opacity:1;
+      width:550px;
+      height:550px;
+      background-size: cover;
+  background-position:center;
+  position: absolute;
+  transform:rotateY(180deg);
+}   
+#pig3 {
+    background-image:url(pig_brick-removebg-preview.png);
+      top: 50%;
+      z-index:1;      
+      right:1000px;
+      opacity:1;
+      width:400px;
+      height:550px;
+      background-size: cover;
+  background-position:center;
+  position: absolute;
+}
+#wolf {
+    background-image:url(wolfboiling.png);
+      top: 75%;
+      z-index:-1;      
+      left:100px;
+      opacity:1;    
+      width:400px;
+      height:350px;
+       background-size: cover;
+  background-position:center;
+  position: absolute;
+    animation: falling 1s ;
+    animation-delay:4s;
+    transform:rotate(290deg);
+
+
+}
+
+#pot{
+    background-image:url(potboiling.png);
+      top: 46%;
+      z-index:1;      
+      left:42px;
+      opacity:1;    
+      width:650px;
+      height:570px;
+      background-size: cover;
+  background-position:center;
+  position: absolute;
+}
+#lid{
+    background-image:url(lid-removebg-preview.png);
+      top: 33%;
+      z-index:5;      
+      left:45px;
+      opacity:1;    
+      width:600px;
+      height:450px;
+      transform:rotateX(50deg) rotateY(2deg);
+      animation: lid 5s ;  
+
+      background-size: cover;
+  background-position:center;
+  position: absolute;
+}
+
+#textbox {
+    width: 600px;
+    height: 350px;
+    position: absolute;
+    top: 5%;   /* Pushes it to the top */
+    right: 10%  ;  /* Pushes it to the left */
+    border-radius: 10px;
+    background-color: rgba(93, 14, 219, 0.7); /* brown with 50% opacity */
+    color: white;  /* text color */
+    padding-right: 30px; /* spacing inside the box */
+    padding-left: 30px;
+    padding-bottom: 50px;
+    padding-top:0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#block {
+  width:450px;
+  height: 400px;
+  position: absolute;
+  top:39%;
+  left:10%;
+  border-radius: 5px;
+  background-color: rgb(89, 214, 16,0.67);
+  font-size:40px;
+  color: white;
+  text-align: center;
+
+}
+#next {
+      width:200px;
+      height:100px;
+      border: 1px dotted black;
+      position:absolute;
+      bottom:50px;
+      right: 50px;
+      background-color: pink;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      text-decoration: none;
+      z-index:100;
+      
+}
+#next:hover {
+      transform: scale(1.1);
+      background-color:lightpink;
+      border: 2px ;
+      line-height: 50px;
+      
+      text-decoration:none
+}
+
+#back {
+      width:200px;
+      height:100px;
+      border: 1px dotted black;
+      position:absolute;
+      bottom:50px;
+      left: 50px;
+      background-color: lightblue;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      text-decoration: none;
+      z-index:100;
+}
+#back:hover {
+      transform: scale(1.1);
+      background-color:rgb(173, 173, 247);
+      border: 2px ;
+      line-height: 50px;
+      
+      text-decoration:none
+}
+.the-end {
+  float: left; /* allows shape-outside to work */
+  width: 400px;
+  height: 200px;
+  background-color: rgba(255, 0, 0, 0.7); /* red semi-transparent */
+  clip-path: polygon(
+    0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%
+  ); /* hexagon-like polygon shape */
+  shape-outside: polygon(
+    0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  margin: 40px;
+}
+
+.the-end p {
+  margin: 0; /* removes default paragraph spacing */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* prevents scrolling when animations move off-screen */
+  width: 100%;
+  height: 100%;
+}

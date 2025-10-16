@@ -1,0 +1,112 @@
+@keyframes slideInLeft {
+  from { transform: translateX(-500px) translateY(-50%); opacity: 0; }
+  to   { transform: translateX(0) translateY(-50%); opacity: 1; }
+}
+@keyframes slideInLeftpig {
+  from { transform: translateX(-500px) translateY(-50%) rotateY(180deg); opacity: 0; }
+  to   { transform: translateX(0) translateY(-50%) rotateY(180deg); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100vw) translateY(-50%); opacity: 0; }
+  to   { transform: translateX(0) translateY(-50%); opacity: 1; }
+}
+
+@keyframes wordmotion {
+      0% {transform: translateY(100px) translateX(50vw) rotateX(120deg); opacity: 0;}
+      100%   {transform: translateY(100px) translateX(30vw); opacity: 1;}
+}
+.character {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position:center;
+  position: absolute;
+}
+
+#title {
+      animation-name: wordmotion;
+      animation-duration: 8s;
+      position:absolute;
+      font-size: 5rem;
+      transform: translateY(100px) translateX(30vw); opacity: 1;
+      font-style:italic;
+      
+}
+
+#pig1 {
+	background-image:url(pig_hay-removebg-preview.png);
+
+      top: 60%;
+      transform:rotateY(180deg) translateY(-50%);
+      z-index:1;      
+      animation: slideInLeft 2s ease forwards 0s;
+      left:650px;
+      opacity:0;
+
+}
+#pig2 {
+      background-image:url(pig_wooftransparent.png);
+      animation: slideInLeft 2s ease forwards 1s;
+      top: 60%;
+      transform: translateY(-50%);
+      z-index:1;
+      left:350px;
+      opacity:0;
+}
+#pig3 {
+      background-image:url(pig_brick-removebg-preview.png);
+      animation: slideInLeftpig 2s ease forwards 2s;
+      top: 60%;
+      transform: translateY(-50%);
+      z-index:1;
+      left:50px;
+      width:300px;
+      height:400px;
+      opacity:0;
+
+}
+#wolf {
+      background-image:url(wolf_regular-removebg-preview.png);
+      animation: slideInRight 2s ease forwards 3s;
+      top: 60%;
+      transform: translateY(-50%);
+      z-index:1;
+      right:350px;
+      opacity:0;
+}
+
+#background1 {
+      background-image:url(background1.png);
+      width:100vw;
+      height:100vh;
+      background-size: cover;
+      background-position:center;
+      position:absolute;
+}
+body {
+      margin: 0;
+}
+#next {
+      width:200px;
+      height:100px;
+      border: 1px dotted black;
+      position:absolute;
+      bottom:50px;
+      right: 50px;
+      background-color: pink;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      text-decoration: none;
+      
+}
+#next:hover {
+      transform: scale(1.1);
+      background-color:lightpink;
+      border: 2px ;
+      line-height: 50px;
+      
+      text-decoration:none
+}

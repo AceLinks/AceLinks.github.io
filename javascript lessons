@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function game(){
+            
+            let player = prompt("Enter rock, paper, or scissor")
+            
+            let choices = ["rock", "paper", "scissor"];
+            let computer = choices[Math.floor(Math.random() * 3)];
+            if (player !== "rock" && player !== "paper" && player !== "scissor") {
+                window.alert("Invalid choice! Please enter rock, paper, or scissor.");
+            }
+            
+
+            if (player == computer) {
+                window.alert("It's a tie!");
+            }
+            else if (
+            (player == "rock" && computer == "scissor") || 
+            (player == "paper" && computer == "rock") ||
+            (player == "scissor" && computer == "paper") 
+            ){
+                window.alert("You win! The computer chose " + computer);
+            }
+            else {
+                window.alert("You lose! The computer chose " + computer);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick=game()> Play Rock Paper Scissor </button>
+</body>
+</html>
